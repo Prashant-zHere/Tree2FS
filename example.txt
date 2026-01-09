@@ -1,0 +1,4 @@
+my_project/
+├── src/
+│   └── main.py
+└── README.md
