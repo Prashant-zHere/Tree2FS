@@ -3,14 +3,14 @@ import re
 
 def create_structure_from_txt(txt_path, base_dir="."):
     if not os.path.isfile(txt_path):
-        print(f"❌ File not found: {txt_path}")
+        print(f"File not found: {txt_path}")
         return
 
     with open(txt_path, "r", encoding="utf-8") as f:
         lines = [line.rstrip() for line in f if line.strip()]
 
     if not lines:
-        print("❌ The text file is empty!")
+        print("The text file is empty!")
         return
 
     path_stack = []
@@ -45,7 +45,7 @@ def create_structure_from_txt(txt_path, base_dir="."):
                 os.makedirs(current_path, exist_ok=True)
                 path_stack.append(current_path)
 
-    print(f"✅ Root directory and structure created successfully from {txt_path}!")
+    print(f"Root directory and structure created successfully from {txt_path}!")
 
 if __name__ == "__main__":
     txt_file_path = input("Enter the path to your structure .txt file: ").strip()
